@@ -1,0 +1,15 @@
+name: public-goods
+scenario: public_goods
+seed: 42
+days: 5
+slots_per_day: 1
+mode: baseline
+population:
+  residents: 6
+  shops: 1
+  producers: 1
+resources:
+  resident_cash: 1000
+  treasury: 20000
+scenario_options:
+  multiplier: 1.5

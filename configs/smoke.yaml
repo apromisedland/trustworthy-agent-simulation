@@ -1,0 +1,17 @@
+name: small-town-smoke
+scenario: small_town
+seed: 42
+days: 2
+slots_per_day: 4
+mode: baseline
+population:
+  residents: 5
+  shops: 2
+  producers: 1
+memory: provenance
+communication: true
+budget:
+  requests: 500
+  input_tokens: 1000000
+  output_tokens: 100000
+  concurrency: 3

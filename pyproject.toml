@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trustworthy-agent-simulation"
+version = "0.1.0"
+description = "Auditable LLM town societies built with AgentScope and Mesa"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = "Apache-2.0"
+dependencies = [
+  "agentscope==2.0.9",
+  "mesa[network]==3.5.1",
+  "pydantic>=2.12,<3",
+  "PyYAML>=6.0.2,<7",
+  "httpx>=0.28,<1",
+  "httpx2>=2.13,<3",
+  "python-dotenv>=1,<2",
+  "streamlit>=1.45,<2",
+  "plotly>=6,<7",
+  "scipy>=1.15,<2",
+  "typer>=0.16,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "ruff>=0.12,<1"]
+
+[project.scripts]
+tass = "tass.cli:app"
+
+[project.entry-points."tass.scenarios"]
+small_town = "tass.scenarios.town:TownScenario"
+public_goods = "tass.scenarios.public_goods:PublicGoodsScenario"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tass"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = ["live: explicitly authorized paid provider validation"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

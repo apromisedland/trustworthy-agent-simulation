@@ -1,0 +1,11 @@
+name: subsidy-disclosure-town
+scenario: small_town
+seed: 42
+days: 7
+slots_per_day: 4
+mode: baseline
+policies:
+  subsidy: 500
+  subsidy_day: 2
+  source_disclosure: true
+  shock_day: 4

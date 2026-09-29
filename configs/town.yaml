@@ -1,0 +1,28 @@
+name: small-town
+scenario: small_town
+seed: 42
+days: 7
+slots_per_day: 4
+mode: baseline
+population:
+  residents: 18
+  shops: 4
+  producers: 2
+memory: provenance
+communication: true
+model:
+  base_url: ${TASS_BASE_URL}
+  model: ${TASS_MODEL}
+  api_key_env: TASS_API_KEY
+budget:
+  requests: 500
+  input_tokens: 1000000
+  output_tokens: 100000
+  concurrency: 3
+policies:
+  subsidy: 0
+  subsidy_day: 2
+  source_disclosure: false
+  shock_day: 4
+  shock_production_multiplier: 0.5
+  shock_duration_days: 2

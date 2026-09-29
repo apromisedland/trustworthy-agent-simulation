@@ -1,0 +1,14 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+address = "127.0.0.1"
+runOnSave = false
+fileWatcherType = "none"
+
+[theme]
+base = "light"
+primaryColor = "#287a78"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f3f6fa"
+textColor = "#23364a"

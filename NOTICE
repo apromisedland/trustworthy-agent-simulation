@@ -1,0 +1,20 @@
+Trustworthy Agent Simulation
+
+This project uses the following Apache-2.0 licensed frameworks as dependencies:
+
+AgentScope 2.0.9, Alibaba Tongyi Lab / AgentScope contributors
+https://github.com/agentscope-ai/agentscope/tree/v2.0.9
+https://github.com/agentscope-ai/agentscope/blob/v2.0.9/LICENSE
+
+Mesa 3.5.1, Mesa Team and contributors
+https://github.com/mesa/mesa/tree/v3.5.1
+https://github.com/mesa/mesa/blob/v3.5.1/LICENSE
+
+AgentScope and Mesa are installed as dependencies; their source repositories
+are not vendored or represented as original work in this repository.
+Other dependencies retain their respective licenses and notices.
+
+Research and design references:
+AgentSociety 2: https://github.com/tsinghua-fib-lab/AgentSociety
+Generative Agents: https://github.com/joonspk-research/generative_agents
+No Smallville game artwork or third-party paper full text is distributed.
